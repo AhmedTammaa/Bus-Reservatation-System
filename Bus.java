@@ -17,12 +17,18 @@ public class Bus {
         this.bus_route = bus_route;
 
     }
+    
+    
+    
+    public Bus(){
+        bus_route = " ";
+    }
 
     public String getBus_route() {
         return bus_route;
     }
 
-    public void setBus_route(String bus_route) {
+    public void setBusRoute(String bus_route) {
         this.bus_route = bus_route;
     }
 
@@ -60,6 +66,10 @@ public class Bus {
         }catch (Exception e){
             throw  e;
         }
+    }
+    
+    public void bookSeat(int seat){
+        this.seat[seat]++;
     }
 
     public Vector<Integer> available_seats(){
